@@ -1,0 +1,300 @@
+CSS
+/* --- Variáveis de Design & Cores --- */
+:root {
+    --primary-color: #0c4a6e;
+    --secondary-color: #0284c7;
+    --dark-color: #1e293b;
+    --light-color: #f8fafc;
+    --accent-color: #ea580c;
+    --text-color: #334155;
+    --font-stack: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* --- Modo Alto Contraste (Acessibilidade) --- */
+body.high-contrast {
+    --primary-color: #ffff00;
+    --secondary-color: #00ffff;
+    --dark-color: #000000;
+    --light-color: #000000;
+    --text-color: #ffffff;
+    --accent-color: #ffff00;
+    background-color: #000000;
+}
+
+body.high-contrast .card, 
+body.high-contrast header {
+    border: 2px solid #ffffff;
+    background-color: #000000;
+}
+
+body.high-contrast a, 
+body.high-contrast h1, 
+body.high-contrast h2, 
+body.high-contrast h3 {
+    color: #ffff00 !important;
+}
+
+/* --- Reset e Estilos Globais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-stack);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #ffffff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Link de Acessibilidade Oculto */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--accent-color);
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.2s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* --- Header & Navegação --- */
+header {
+    background-color: var(--light-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--dark-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: color 0.2s;
+}
+
+nav a:hover, nav a:focus {
+    color: var(--secondary-color);
+    outline: 2px solid var(--secondary-color);
+}
+
+#contrast-toggle {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Menu Mobile Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark-color);
+    transition: 0.3s;
+}
+
+/* --- Hero Banner --- */
+.hero {
+    background: linear-gradient(rgba(12, 74, 110, 0.8), rgba(30, 41, 91, 0.8)), 
+                url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn:hover, .btn:focus {
+    background-color: #c2410c;
+    outline: 3px solid white;
+}
+
+/* --- Layouts & Seções --- */
+.section {
+    padding: 60px 0;
+}
+
+.bg-light {
+    background-color: var(--light-color);
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Imagens */
+.responsive-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    padding-bottom: 20px;
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 15px;
+    color: var(--dark-color);
+}
+
+.card p {
+    margin: 0 15px;
+    font-size: 0.95rem;
+}
+
+/* --- Rodapé --- */
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--secondary-color);
+}
+
+/* --- Responsividade (Media Queries) --- */
+@media (max-width: 768px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-2.reverse .text-content {
+        order: 2;
+    }
+    
+    .grid-2.reverse .image-container {
+        order: 1;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--light-color);
+        box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+        padding: 20px;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+}
