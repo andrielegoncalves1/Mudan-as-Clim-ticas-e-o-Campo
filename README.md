@@ -1,4 +1,5 @@
-# Mudan-as-Clim-ticas-e-o-CampoAs mudanças climáticas são alterações nos padrões do clima da Terra causadas principalmente pelo aumento dos gases de efeito estufa na atmosfera. Essas mudanças afetam diretamente a agricultura, a pecuária e a vida das pessoas que dependem do campo.
+# Mudan-as-Clim-ticas-e-o-Campo
+As mudanças climáticas são alterações nos padrões do clima da Terra causadas principalmente pelo aumento dos gases de efeito estufa na atmosfera. Essas mudanças afetam diretamente a agricultura, a pecuária e a vida das pessoas que dependem do campo.
 O aumento das temperaturas, as secas prolongadas, as chuvas intensas e os eventos climáticos extremos podem reduzir a produção de alimentos, prejudicar o solo e causar perdas econômicas aos produtores rurais. Além disso, a escassez de água pode dificultar a irrigação das lavouras e o cuidado com os animais.
 Para enfrentar esse desafio, é importante adotar práticas sustentáveis, como o plantio de árvores, a preservação das nascentes, o uso consciente da água e a redução do desmatamento. A utilização de tecnologias agrícolas mais eficientes também ajuda a produzir alimentos com menor impacto ambiental.
 Cuidar do meio ambiente é uma responsabilidade de todos. Com ações conscientes, é possível reduzir os efeitos das mudanças climáticas e garanMudanças Climáticas e o Campo
